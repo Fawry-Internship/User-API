@@ -5,10 +5,7 @@ import org.example.userapi.model.auth.AuthenticationRequest;
 import org.example.userapi.model.auth.AuthenticationResponse;
 import org.example.userapi.service.AuthenticationService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users/auth")
@@ -27,5 +24,10 @@ public class AuthenticationController {
     public ResponseEntity<AuthenticationResponse> register(@Valid @RequestBody AuthenticationRequest authenticationRequest){
         AuthenticationResponse response = authenticationService.register(authenticationRequest);
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/token/validation")
+    public ResponseEntity<String> validateToken(){
+        return ResponseEntity.ok("success");
     }
 }
