@@ -27,6 +27,7 @@ This project is a user management API that allows users to authenticate, registe
 |  3. | Activate User            | Activate a user account               | `PUT /users/activation/{userId}`       |
 |  4. | Deactivate User          | Deactivate a user account             | `PUT /users/deactivation/{userId}`     |
 |  5. | Get All Users            | Retrieve a list of all users          | `GET /users`                           |
+| 6.  | Validate Token  | Validate the token             | `GET /users/auth/token/validation` |
 
 ## ERD
 
