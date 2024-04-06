@@ -25,9 +25,4 @@ public class AuthenticationController {
         AuthenticationResponse response = authenticationService.register(authenticationRequest);
         return ResponseEntity.ok(response);
     }
-
-    @GetMapping("/token/validation")
-    public ResponseEntity<String> validateToken(){
-        return ResponseEntity.ok("success");
-    }
 }
