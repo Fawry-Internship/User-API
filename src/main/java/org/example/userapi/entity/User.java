@@ -21,10 +21,11 @@ public class User implements UserDetails {
     @Id
     Long id ;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     @Email(message = "Please provide a valid email address")
     String email;
 
+    @Column(nullable = false)
     @Size(min = 8, message = "Password must be at least 8 characters long")
     String password;
 
